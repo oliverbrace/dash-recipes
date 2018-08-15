@@ -63,8 +63,8 @@ def cell_style(value, min_value, max_value):
 
 
 def generate_table(dataframe, max_rows=100):
-    max_value = df.max(numeric_only=True).max()
-    min_value = df.min(numeric_only=True).max()
+    max_value = dataframe.max(numeric_only=True).max()
+    min_value = dataframe.min(numeric_only=True).max()
     rows = []
     for i in range(min(len(dataframe), max_rows)):
         row = []
